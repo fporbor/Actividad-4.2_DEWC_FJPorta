@@ -1,0 +1,12 @@
+{
+  "nombre": "Juan Pérez",
+  "edad": 30,
+  "activo": true,
+  "preferencias": ["Deportes", "Música", "Tecnología", "Cine", "Viajes"],
+  "direccion": {
+    "calle": "Calle Ficticia 123",
+    "ciudad": "Madrid",
+    "codigo_postal": "28001"
+  },
+  "fecha_defuncion": null
+}

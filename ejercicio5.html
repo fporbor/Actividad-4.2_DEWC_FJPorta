@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del alumno</title>
+</head>
+<body>
+
+    <h1 id="info">Datos del alumno</h1>
+
+    <script>
+        const jsonString = '{"nombre": "Mario", "apellidos": "Sánchez López", "nacido": "26-11-1986", "curso": "DAW2", "asignatura": "DEWC", "ciudad": "El Puerto de Santa María"}';
+
+        const alumno = JSON.parse(jsonString);
+
+        const partes = alumno.nacido.split("-");
+        const fecha = new Date(partes[2], partes[1] - 1, partes[0]);
+        alumno.nacido = fecha.toDateString();
+
+        let texto = "";
+        for (let p in alumno) {
+            texto += alumno[p] + " ";
+        }
+
+        document.getElementById("info").innerText = texto.trim();
+    </script>
+
+</body>
+</html>
